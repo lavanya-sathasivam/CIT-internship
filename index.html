@@ -1,22 +1,213 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Simple Website</title>
+<title>SafeTrail</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f5f7fa;
+}
+
+header{
+background:#0f172a;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#1e293b;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+}
+
+.hero{
+padding:60px;
+text-align:center;
+background:#e2e8f0;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.search-box{
+margin-top:20px;
+}
+
+input{
+padding:10px;
+width:300px;
+}
+
+button{
+padding:10px 15px;
+background:#2563eb;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.section{
+padding:40px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.safe{
+color:green;
+font-weight:bold;
+}
+
+.medium{
+color:orange;
+font-weight:bold;
+}
+
+.high{
+color:red;
+font-weight:bold;
+}
+
+.sos{
+text-align:center;
+background:#fee2e2;
+padding:40px;
+}
+
+.sos button{
+background:red;
+font-size:18px;
+}
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML webpage created using basic tags.</p>
-    <h2>About Me</h2>
-    <p>I am learning web development.</p>
-    <p>I love Machine learning and web development.</p>
-    <h2>My Hobbies</h2>
-    <ul>
-        <li>Reading</li>
-        <li>Coding</li>
-        <li>Playing Games</li>
-    </ul>
-    <h2>Contact</h2>
-    <p>Email: example@email.com</p>
-    <a href="https://www.google.com">Visit Google</a>
+
+<header>
+<h1>SafeTrail</h1>
+<p>Smart Tourist Safety Monitoring System</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#zones">Safety Zones</a>
+<a href="#quiz">Assessment</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h1>Travel Safe. Stay Connected.</h1>
+<p>Monitor tourist safety and access emergency support.</p>
+
+<div class="search-box">
+<input type="text" placeholder="Search tourist location">
+<button>Search</button>
+</div>
+</section>
+
+<section class="section" id="zones">
+<h2>Tourist Safety Zones</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Madurai Tourist Zone</h3>
+<p>GPS Monitoring Enabled</p>
+<p class="safe">Safe</p>
+</div>
+
+<div class="card">
+<h3>Kodaikanal Safety Hub</h3>
+<p>Emergency Support Available</p>
+<p class="safe">Safe</p>
+</div>
+
+<div class="card">
+<h3>Marina Beach Zone</h3>
+<p>Heavy Crowd Monitoring</p>
+<p class="medium">Moderate Risk</p>
+</div>
+
+<div class="card">
+<h3>Ooty Monitoring Center</h3>
+<p>Authority Control Station</p>
+<p class="safe">Safe</p>
+</div>
+
+</div>
+</section>
+
+<section class="sos">
+<h2>Emergency SOS</h2>
+<p>Click below to send an emergency alert.</p>
+
+<button onclick="sendSOS()">
+SOS ALERT
+</button>
+</section>
+
+<section class="section" id="quiz">
+<h2>Safety Assessment</h2>
+
+<p>Do you travel alone?</p>
+<button onclick="showResult()">Yes</button>
+<button onclick="showResult()">No</button>
+
+<p id="result"></p>
+</section>
+
+<section class="section" id="contact">
+<h2>Emergency Contacts</h2>
+
+<p>Police: 100</p>
+<p>Ambulance: 108</p>
+<p>Tourist Helpline: 1363</p>
+</section>
+
+<footer>
+<p>© 2026 SafeTrail</p>
+</footer>
+
+<script>
+
+function sendSOS(){
+alert("Emergency Alert Sent Successfully");
+}
+
+function showResult(){
+document.getElementById("result").innerHTML=
+"Recommended Safety Level: High Protection";
+}
+
+</script>
+
 </body>
 </html>
